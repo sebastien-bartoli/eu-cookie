@@ -8,7 +8,7 @@ The directive allows for this kind of "only warning and instructions" versions (
 
 ## Usage
 
-Upload the folder anywhere on the internet, but preferably on one of your webserver. Replace the options in `index.html` with your context. 
+Upload the folder anywhere on the internet, but preferably on one of your webserver. Replace the options in `index.html` (see below) with your context. 
 
 Only options 4 through 7 will need to be changed : 
 
@@ -16,6 +16,14 @@ Only options 4 through 7 will need to be changed :
 - **5** : except if you have changed the structure of the folder, you shouldn't have to change this.
 - **6** : change `subdomain.example.org` with the domain or subdomain on which you want the cookie to be applied (it should probably be the domain on which you are loading the bar).
 - **7** : you can add another, optional 7th option, that many will probably use, in order to completely customize the displayed text. It can handle any HTML code, so have fun.
+
+```HTML
+<!-- EU Cookie Directive Bar loads here  -->
+<script type="text/javascript">
+(function(eu,c,o,ok,i,e,law,lo,de,r){de=c.createElement(o);r=c.getElementsByTagName(o)[0];de.async=1;de.src=ok+i;r.parentNode.insertBefore(de,r);eu.cmDomain=e;eu.cmCDN=ok;eu.cmTextContent=law})(window, document,'script','//cdn.example.org/', '/js/cookie-manager.js', 'subdomain.example.org');
+</script>
+<!-- End of EU Cookie Directive Bar -->
+```
 
 Then, copy-paste the modified content of `index.html` anywhere on your website, and voila! You're done.
 
