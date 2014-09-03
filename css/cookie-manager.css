@@ -35,9 +35,9 @@
 }
 
 .cookie-bar a:hover{
-	color: #4169E1 ;
+	color: #1E90FF ;
 	font-weight: bold ;
-	border-bottom: 1px dotted #4169E1 ;
+	border-bottom: 1px dotted #1E90FF ;
 }
 
 .cookie-bar div.cookie-bar-content{
