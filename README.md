@@ -6,6 +6,8 @@ This module provides only a warning to visitors. Ideally it should contain a lin
 
 The directive allows for this kind of "only warning and instructions" versions (in any case this module blocks incoming cookies), which are widely used by various high-traffic, well-recognized websites.
 
+**Demo is available at [github.io](http://sebastien-bartoli.github.io/eu-cookie/)**
+
 ## Usage
 
 Upload the folder anywhere on the internet, but preferably on one of your webserver. Replace the options in `index.html` (see below) with your context. 
