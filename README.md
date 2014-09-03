@@ -21,11 +21,11 @@ Then, copy-paste the modified content of `index.html` anywhere on your website, 
 
 ## Dependencies
 
-- jQuery 1.11.1
-- jquery.cookie.js (https://github.com/carhartl/jquery-cookie)
+- [jQuery 1.11.1](http://jquery.com)
+- [jquery.cookie.js](https://github.com/carhartl/jquery-cookie)
+- [Foundation Icons Fonts 3](http://zurb.com/playground/foundation-icon-fonts-3)
 
-Both are loaded automagically by the module without need for intervention. jQuery is loaded only if the hosting website isn't available.
-
+All are included into the repo and loaded automagically by the module without need for intervention. jQuery is loaded only if the hosting website isn't available.
 
 ## License
 
