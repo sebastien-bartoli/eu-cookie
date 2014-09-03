@@ -20,10 +20,10 @@ Only options 4 through 7 will need to be changed :
 ```HTML
 <!-- EU Cookie Directive Bar loads here  -->
 <script type="text/javascript">
-(function(eu,c,o,ok,i,e,law,lo,de,r){
-de=c.createElement(o);r=c.getElementsByTagName(o)[0];de.async=1;de.src=ok+i;
-r.parentNode.insertBefore(de,r);eu.cmDomain=e;eu.cmCDN=ok;eu.cmTextContent=law
-})(window, document,'script','//cdn.example.org/','/js/cookie-manager.js','subdomain.example.org');
+  (function(eu,c,o,ok,i,e,law,lo,de,r){
+    de=c.createElement(o);r=c.getElementsByTagName(o)[0];de.async=1;de.src=ok+i;
+    r.parentNode.insertBefore(de,r);eu.cmDomain=e;eu.cmCDN=ok;eu.cmTextContent=law
+  })(window, document,'script','//cdn.example.org/','/js/cookie-manager.js','subdomain.example.org');
 </script>
 <!-- End of EU Cookie Directive Bar -->
 ```
