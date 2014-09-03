@@ -21,7 +21,11 @@ Then, copy-paste the modified content of `index.html` anywhere on your website, 
 
 ## Dependencies
 
-The module is using jQuery 1.11.1 and jquery.cookie.js, both are loaded by the module without need for intervention. jQuery is loaded only if the hosting website isn't available.
+- jQuery 1.11.1
+- jquery.cookie.js (https://github.com/carhartl/jquery-cookie)
+
+Both are loaded automagically by the module without need for intervention. jQuery is loaded only if the hosting website isn't available.
+
 
 ## License
 
