@@ -21,7 +21,7 @@ function main($){
 			});
 
 			if( typeof(window.cmTextContent) === "undefined" ){
-				window.cmTextContent = "By continuing your visit to this site, you accept the use of cookies, including for audience measurement and content sharing on social networks <a href='/privacy#use-of-cookies'>Read more and manage these settings.</a>" ;
+				window.cmTextContent = "By continuing your visit to this site, you accept the use of cookies, including for audience measurement and content sharing on social networks <a href='privacy#use-of-cookies'>Read more and manage these settings.</a>" ;
 			}
 
 			$(cbhtml).find('.cookie-bar-content').html(window.cmTextContent);
