@@ -1,5 +1,6 @@
 .cookie-bar{
 	min-height: 35px;
+	overflow: hidden ;
 	font-size: 12px ;
 	padding: 8px 30px ;
 	color: white ;
