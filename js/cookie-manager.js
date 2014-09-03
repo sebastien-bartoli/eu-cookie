@@ -34,8 +34,6 @@ function main($){
 					$('.cookie-bar').removeClass('disappear');
 				}, 500);
 			}, tol);
-		} else {
-			console.warn('already accepted the cookies for this domain, no need to re-display the cookie bar');
 		}
 	});
 }
@@ -52,7 +50,6 @@ function evalScrollPosition($){
 
 function loadDependencies(){
 	window.clearTimeout(loadjQuery);
-	console.log("loading jQuery since the host website doesn't seems to have it loaded");
 	var jqhtml = document.createElement('script');
 	jqhtml.async = 1 ;
 	jqhtml.src = window.cmCDN + '/js/jquery-1.11.1.min.js' ;
