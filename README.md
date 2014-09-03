@@ -1,20 +1,48 @@
 # EU Cookie Directive Bar
 
-This very simple and lightweight javascript module aims to add a small top bar on your website to display a custom message to your visitors, in compliance with the European Union Directive about cookies and privacy.
+This very simple and lightweight javascript module aims to add a small top bar on your website to display a custom message to your visitors, in compliance with the [European Union Directive about cookies and privacy](http://ec.europa.eu/ipg/basics/legal/cookies/index_en.htm).
+
+This module provides only a warning to visitors. Ideally it should contain a link to your Terms or Privacy page with instructions on what are cookies, and how to prevent cookies to be installed on your website. 
+
+The directive allows for this kind of "only warning and instructions" versions (in any case this module blocks incoming cookies), which are widely used by various high-traffic, well-recognized websites.
 
 ## Usage
 
-Upload the folder anywhere on the internet, but preferably on one of your webserver. Replace the options in index.html with your context. 
+Upload the folder anywhere on the internet, but preferably on one of your webserver. Replace the options in `index.html` with your context. 
 
 Only options 4 through 7 will need to be changed : 
 
-- 4 : replace "//cdn.example.org" with the domain where the folder is uploaded. The "//" before the URL insure the content will be loaded asynchronously AND using http or https depending on what's available.
-- 5 : except if you have changed the structure of the folder, you shouldn't have to change this.
-- 6 : change "subdomain.example.org" with the domain or subdomain on which you want the cookie to be applied (it should probably be the domain on which you are loading the bar).
-- 7 : you can add another, optional 7th option, that many will probably use, in order to completely customise the displayed text. It can handle any HTML code, so have fun.
+- **4** : replace `//cdn.example.org` with the domain where the folder is uploaded. The `//` before the URL insure the content will be loaded asynchronously AND using http or https depending on what's available.
+- **5** : except if you have changed the structure of the folder, you shouldn't have to change this.
+- **6** : change `subdomain.example.org` with the domain or subdomain on which you want the cookie to be applied (it should probably be the domain on which you are loading the bar).
+- **7** : you can add another, optional 7th option, that many will probably use, in order to completely customize the displayed text. It can handle any HTML code, so have fun.
 
-Then, copy-paste the modified content of index.html anywhere on your website, and voila! You're done.
+Then, copy-paste the modified content of `index.html` anywhere on your website, and voila! You're done.
 
 ## Dependencies
 
 The module is using jQuery 1.11.1 and jquery.cookie.js, both are loaded by the module without need for intervention. jQuery is loaded only if the hosting website isn't available.
+
+## License
+
+The MIT License (MIT)
+
+Copyright (c) 2014 Sébastien Bartoli
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
