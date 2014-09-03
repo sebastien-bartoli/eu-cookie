@@ -1,5 +1,6 @@
 function main($){
 	$.getScript( window.cmCDN + '/js/jquery.cookie.js', function(){
+		$.removeCookie('eu-cookie-directive', {path: '/', domain: window.cmDomain}); // For the demo purposes only.
 		if( typeof($.cookie('eu-cookie-directive')) === "undefined" ){
 			
 			var cbhtml = $(document.createElement('div')).attr('style', 'display:none').addClass('cookie-bar disappear').append($(document.createElement('div')).addClass('cookie-bar-content')).append($(document.createElement('i')).addClass('fi-x')).append($(document.createElement('div')).addClass('clear'));
