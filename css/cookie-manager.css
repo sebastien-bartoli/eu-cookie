@@ -1,5 +1,6 @@
 .cookie-bar{
 	min-height: 35px;
+	overflow: hidden ;
 	font-size: 12px ;
 	padding: 8px 30px ;
 	color: white ;
@@ -34,9 +35,9 @@
 }
 
 .cookie-bar a:hover{
-	color: #4169EF ;
+	color: #1E90FF ;
 	font-weight: bold ;
-	border-bottom: 1px dotted #4169EF ;
+	border-bottom: 1px dotted #1E90FF ;
 }
 
 .cookie-bar div.cookie-bar-content{
