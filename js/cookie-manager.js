@@ -4,10 +4,17 @@ function main($){
 			
 			var cbhtml = $(document.createElement('div')).attr('style', 'display:none').addClass('cookie-bar disappear').append($(document.createElement('div')).addClass('cookie-bar-content')).append($(document.createElement('i')).addClass('fi-x')).append($(document.createElement('div')).addClass('clear'));
 			
-			var csshtml = $(document.createElement('link')).attr({rel: 'stylesheet', type: 'text/css', href: window.cmCDN + '/css/cookie-manager.css'});
+			if( document.createStyleSheet ){
+				document.createStyleSheet(window.cmCDN + '/css/cookie-manager.css');
+				document.createStyleSheet(window.cmCDN + '/css/foundation-icons.css');
+			} else {
+				var csshtml = $(document.createElement('link')).attr({rel: 'stylesheet', type: 'text/css', href: window.cmCDN + '/css/cookie-manager.css'});
 
-			var ficsshtml = $(document.createElement('link')).attr({rel: 'stylesheet', type: 'text/css', href: window.cmCDN + '/css/foundation-icons.css'});
-			$("head").append(csshtml).append(ficsshtml);
+				var ficsshtml = $(document.createElement('link')).attr({rel: 'stylesheet', type: 'text/css', href: window.cmCDN + '/css/foundation-icons.css'});
+
+				$("head").append(csshtml).append(ficsshtml);
+			}
+									
 			$(document).scroll(function(){
 				evalScrollPosition($);
 			});
