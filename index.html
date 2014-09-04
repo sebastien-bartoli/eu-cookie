@@ -4,9 +4,8 @@
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Eu-cookie : A simple &amp; lightweight UI component for compliance with the EU Directive about cookies and privacy.">
+    <meta name="description" content="EU-cookie : A simple &amp; lightweight UI component for compliance with the EU directive about cookies and privacy.">
 
-    <script src="js/jquery-1.11.1.min.js"></script>
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
     <title>EU-cookie</title>
@@ -19,8 +18,8 @@
         <header class="inner">
           <a id="forkme_banner" href="https://github.com/sebastien-bartoli/eu-cookie">View on GitHub</a>
 
-          <h1 id="project_title">Eu-cookie</h1>
-          <h2 id="project_tagline">A simple, lightweight &amp; responsive UI component for compliance with the EU Directive about cookies and privacy.</h2>
+          <h1 id="project_title">EU-cookie</h1>
+          <h2 id="project_tagline">A simple &amp; lightweight UI component for compliance with the EU directive about cookies and privacy.</h2>
 
             <section id="downloads">
               <a class="zip_download_link" href="https://github.com/sebastien-bartoli/eu-cookie/zipball/master">Download this project as a .zip file</a>
@@ -33,40 +32,47 @@
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
         <h1>
-<a name="eu-cookie-directive-bar" class="anchor" href="#eu-cookie-directive-bar"><span class="octicon octicon-link"></span></a>EU Cookie Directive Bar</h1>
+<a name="eu-cookie-directive-bar" class="anchor" href="#eu-cookie-directive-bar"><span class="octicon octicon-link"></span></a>EU cookie directive bar</h1>
 
-<p>This very simple and lightweight javascript module aims to add a small top bar on your website to display a custom message to your visitors, in compliance with the <a href="http://ec.europa.eu/ipg/basics/legal/cookies/index_en.htm">European Union Directive about cookies and privacy</a>.</p>
+<p><strong>v0.1</strong></p>
 
-<p>This module provides only a warning to visitors. Ideally it should contain a link to your Terms or Privacy page with instructions on what are cookies, and how to prevent cookies to be installed on your website. </p>
+<p>This very simple, lightweight &amp; responsive javascript UI component aims to add a small top bar on your website to display a custom message to your visitors, in compliance with the <a href="http://ec.europa.eu/ipg/basics/legal/cookies/index_en.htm">European Union Directive about cookies and privacy</a>.</p>
 
-<p>The directive allows for this kind of "only warning and instructions" versions (this component DOES NOT blocks incoming cookies), which are widely used by various high-traffic, well-recognized websites.</p>
+<p>This component provides only a warning to visitors. Ideally it should contain a link to your Terms or Privacy page with instructions on what are cookies, and how to prevent cookies to be installed on the user's browser. </p>
 
-<p>You can see a demo on this page, as it is activated, it should appear at each reload, the cookie is getting deleted so you can see how it works.</p>
+<p>The EU directive allows for this kind of "only warning and instructions" versions <strong>(this component DOES NOT blocks incoming cookies)</strong>, which are widely used by various high-traffic, well-recognized websites, such as <a href="http://www.adobe.com/fr/">Adobe</a>, <a href="http://www.lemonde.fr">Le Monde</a> or <a href="http://www.soundcloud.com">SoundCloud</a>.</p>
+
+<p><strong>Demo is available at <a href="http://sebastien-bartoli.github.io/eu-cookie/">github.io</a></strong></p>
+
+<p>You can see on the demo, that the bar appears at each reload. That is because the cookie is getting deleted each time so you can see how it works, on production website, once accepted ( clicked on the link or on the X symbol ), it won't appear for a year or until the user deletes cookies.</p>
 
 <h2>
 <a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
 
 <p>Upload the folder anywhere on the internet, but preferably on one of your webserver. Replace the options in <code>index.html</code> (see below) with your context. </p>
 
-<p>Only options 4 through 7 will need to be changed : </p>
+<p>Parameters 4 through 7 will need to be changed to accomodate your configuration : </p>
 
 <ul>
 <li>
 <strong>4</strong> : replace <code>//cdn.example.org</code> with the domain where the folder is uploaded. The <code>//</code> before the URL insure the content will be loaded asynchronously AND using http or https depending on what's available.</li>
 <li>
-<strong>5</strong> : except if you have changed the structure of the folder, you shouldn't have to change this.</li>
+<strong>5</strong> : except if you have changed the structure of the folders, you shouldn't have to change this.</li>
 <li>
 <strong>6</strong> : change <code>subdomain.example.org</code> with the domain or subdomain on which you want the cookie to be applied (it should probably be the domain on which you are loading the bar).</li>
 <li>
 <strong>7</strong> : you can add another, optional 7th option, that many will probably use, in order to completely customize the displayed text. It can handle any HTML code, so have fun.</li>
 </ul><div class="highlight highlight-HTML"><pre><span class="c">&lt;!-- EU Cookie Directive Bar loads here  --&gt;</span>
 <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
-<span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">eu</span><span class="p">,</span><span class="nx">c</span><span class="p">,</span><span class="nx">o</span><span class="p">,</span><span class="nx">ok</span><span class="p">,</span><span class="nx">i</span><span class="p">,</span><span class="nx">e</span><span class="p">,</span><span class="nx">law</span><span class="p">,</span><span class="nx">loa</span><span class="p">,</span><span class="nx">de</span><span class="p">,</span><span class="nx">r</span><span class="p">){</span><span class="nx">de</span><span class="o">=</span><span class="nx">c</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="nx">o</span><span class="p">);</span><span class="nx">r</span><span class="o">=</span><span class="nx">c</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="nx">o</span><span class="p">)[</span><span class="mi">0</span><span class="p">];</span><span class="nx">de</span><span class="p">.</span><span class="nx">async</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="nx">de</span><span class="p">.</span><span class="nx">src</span><span class="o">=</span><span class="nx">ok</span><span class="o">+</span><span class="nx">i</span><span class="p">;</span><span class="nx">r</span><span class="p">.</span><span class="nx">parentNode</span><span class="p">.</span><span class="nx">insertBefore</span><span class="p">(</span><span class="nx">de</span><span class="p">,</span><span class="nx">r</span><span class="p">);</span><span class="nx">eu</span><span class="p">.</span><span class="nx">cmDomain</span><span class="o">=</span><span class="nx">e</span><span class="p">;</span><span class="nx">eu</span><span class="p">.</span><span class="nx">cmCDN</span><span class="o">=</span><span class="nx">ok</span><span class="p">;</span><span class="nx">eu</span><span class="p">.</span><span class="nx">cmTextContent</span><span class="o">=</span><span class="nx">law</span><span class="p">})(</span><span class="nb">window</span><span class="p">,</span><span class="nb">document</span><span class="p">,</span><span class="s1">'script'</span><span class="p">,</span><span class="s1">'//cdn.example.org/'</span><span class="p">,</span><span class="s1">'/js/cookie-manager.js'</span><span class="p">,</span><span class="s1">'subdomain.example.org'</span><span class="p">);</span>
+  <span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">eu</span><span class="p">,</span><span class="nx">c</span><span class="p">,</span><span class="nx">o</span><span class="p">,</span><span class="nx">ok</span><span class="p">,</span><span class="nx">i</span><span class="p">,</span><span class="nx">e</span><span class="p">,</span><span class="nx">law</span><span class="p">,</span><span class="nx">loa</span><span class="p">,</span><span class="nx">de</span><span class="p">,</span><span class="nx">r</span><span class="p">){</span>
+    <span class="nx">de</span><span class="o">=</span><span class="nx">c</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="nx">o</span><span class="p">);</span><span class="nx">r</span><span class="o">=</span><span class="nx">c</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="nx">o</span><span class="p">)[</span><span class="mi">0</span><span class="p">];</span><span class="nx">de</span><span class="p">.</span><span class="nx">async</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="nx">de</span><span class="p">.</span><span class="nx">src</span><span class="o">=</span><span class="nx">ok</span><span class="o">+</span><span class="nx">i</span><span class="p">;</span>
+    <span class="nx">r</span><span class="p">.</span><span class="nx">parentNode</span><span class="p">.</span><span class="nx">insertBefore</span><span class="p">(</span><span class="nx">de</span><span class="p">,</span><span class="nx">r</span><span class="p">);</span><span class="nx">eu</span><span class="p">.</span><span class="nx">cmDomain</span><span class="o">=</span><span class="nx">e</span><span class="p">;</span><span class="nx">eu</span><span class="p">.</span><span class="nx">cmCDN</span><span class="o">=</span><span class="nx">ok</span><span class="p">;</span><span class="nx">eu</span><span class="p">.</span><span class="nx">cmTextContent</span><span class="o">=</span><span class="nx">law</span>
+  <span class="p">})(</span><span class="nb">window</span><span class="p">,</span><span class="nb">document</span><span class="p">,</span><span class="s1">'script'</span><span class="p">,</span><span class="s1">'//cdn.example.org/'</span><span class="p">,</span><span class="s1">'/js/cookie-manager.js'</span><span class="p">,</span><span class="s1">'subdomain.example.org'</span><span class="p">);</span>
 <span class="nt">&lt;/script&gt;</span>
 <span class="c">&lt;!-- End of EU Cookie Directive Bar --&gt;</span>
 </pre></div>
 
-<p>Then, copy-paste the modified content of <code>index.html</code> anywhere on your website, and voila! You're done.</p>
+<p>Then, copy-paste the modified content of <code>index.html</code> anywhere on your website, and <em>voila!</em> You're done.</p>
 
 <h2>
 <a name="dependencies" class="anchor" href="#dependencies"><span class="octicon octicon-link"></span></a>Dependencies</h2>
@@ -75,9 +81,19 @@
 <li><a href="http://jquery.com">jQuery 1.11.1</a></li>
 <li><a href="https://github.com/carhartl/jquery-cookie">jquery.cookie.js</a></li>
 <li><a href="http://zurb.com/playground/foundation-icon-fonts-3">Foundation Icons Fonts 3</a></li>
-</ul><p>All are included into the repo and loaded automagically by the module without need for intervention. jQuery is loaded only if the hosting website isn't available.</p>
+</ul><p>All are included into the repo and loaded automagically by the module without need for intervention. jQuery is loaded only if it isn't available on the hosting website.</p>
 
 <h2>
+<a name="roadmap" class="anchor" href="#roadmap"><span class="octicon octicon-link"></span></a>Roadmap</h2>
+
+<p>Next steps for this :</p>
+
+<ul>
+<li>use &amp; configure bower to install dependencies and remove them from the repo</li>
+<li>add an 8th parameter to change the colors of the cookie-bar easily without having to go in the css file</li>
+<li>find a way to block cookies being set on the browser until this is validated <em>(is there a need for that ?)</em>
+</li>
+</ul><h2>
 <a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
 
 <p>The MIT License (MIT)</p>
@@ -107,16 +123,12 @@ SOFTWARE.</p>
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
       <footer class="inner">
-        <p class="copyright">Eu-cookie maintained by <a href="https://github.com/sebastien-bartoli">sebastien-bartoli</a></p>
+        <p class="copyright">EU-cookie maintained by <a href="https://github.com/sebastien-bartoli">sebastien-bartoli</a></p>
         <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
 
-    <!-- EU Cookie Directive Bar loads here  -->
-<script type="text/javascript">
-(function(eu,c,o,ok,i,e,law,lo,de,r){de=c.createElement(o);r=c.getElementsByTagName(o)[0];de.async=1;de.src=ok+i;r.parentNode.insertBefore(de,r);eu.cmDomain=e;eu.cmCDN=ok;eu.cmTextContent=law})(window,document,'script','//sebastien-bartoli.github.io/eu-cookie','/js/cookie-manager.js','sebastien-bartoli.github.io');
-</script>
-<!-- End of EU Cookie Directive Bar -->
+    
 
   </body>
 </html>
