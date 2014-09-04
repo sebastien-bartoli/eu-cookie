@@ -1,14 +1,20 @@
 function main($){
 	$.getScript( window.cmCDN + '/js/jquery.cookie.js', function(){
-		$.removeCookie('eu-cookie-directive', {path: '/', domain: window.cmDomain}); // For the demo purposes only.
 		if( typeof($.cookie('eu-cookie-directive')) === "undefined" ){
 			
 			var cbhtml = $(document.createElement('div')).attr('style', 'display:none').addClass('cookie-bar disappear').append($(document.createElement('div')).addClass('cookie-bar-content')).append($(document.createElement('i')).addClass('fi-x')).append($(document.createElement('div')).addClass('clear'));
 			
-			var csshtml = $(document.createElement('link')).attr({rel: 'stylesheet', type: 'text/css', href: window.cmCDN + '/css/cookie-manager.css'});
+			if( document.createStyleSheet ){
+				document.createStyleSheet(window.cmCDN + '/css/cookie-manager.css');
+				document.createStyleSheet(window.cmCDN + '/css/foundation-icons.css');
+			} else {
+				var csshtml = $(document.createElement('link')).attr({rel: 'stylesheet', type: 'text/css', href: window.cmCDN + '/css/cookie-manager.css'});
 
-			var ficsshtml = $(document.createElement('link')).attr({rel: 'stylesheet', type: 'text/css', href: window.cmCDN + '/css/foundation-icons.css'});
-			$("head").append(csshtml).append(ficsshtml);
+				var ficsshtml = $(document.createElement('link')).attr({rel: 'stylesheet', type: 'text/css', href: window.cmCDN + '/css/foundation-icons.css'});
+
+				$("head").append(csshtml).append(ficsshtml);
+			}
+									
 			$(document).scroll(function(){
 				evalScrollPosition($);
 			});
@@ -21,7 +27,7 @@ function main($){
 			});
 
 			if( typeof(window.cmTextContent) === "undefined" ){
-				window.cmTextContent = "By continuing your visit to this site, you accept the use of cookies, including for audience measurement and content sharing on social networks <a href='privacy#use-of-cookies'>Read more and manage these settings.</a>" ;
+				window.cmTextContent = "By continuing your visit to this site, you accept the use of cookies, including for audience measurement and content sharing on social networks <a href='/privacy#use-of-cookies'>Read more and manage these settings.</a>" ;
 			}
 
 			$(cbhtml).find('.cookie-bar-content').html(window.cmTextContent);
