@@ -21,7 +21,11 @@ function main($){
 			
 			$(document).on('click', '.cookie-bar i, a', function(e){		
 				if($(e.target).is('i')){			
-					$('.cookie-bar').addClass('disappear');	
+					if(document.createStyleSheet){
+						$('.cookie-bar').hide();
+					} else {
+						$('.cookie-bar').addClass('disappear');	
+					}		
 				}		
 				$.cookie('eu-cookie-directive', 'accepted', {expires: 365, path: '/', domain: window.cmDomain});
 			});
