@@ -1,21 +1,25 @@
-# EU Cookie Directive Bar
+# EU cookie directive bar
+
+**v0.1**
 
 This very simple, lightweight & responsive javascript UI component aims to add a small top bar on your website to display a custom message to your visitors, in compliance with the [European Union Directive about cookies and privacy](http://ec.europa.eu/ipg/basics/legal/cookies/index_en.htm).
 
-This module provides only a warning to visitors. Ideally it should contain a link to your Terms or Privacy page with instructions on what are cookies, and how to prevent cookies to be installed on your website. 
+This component provides only a warning to visitors. Ideally it should contain a link to your Terms or Privacy page with instructions on what are cookies, and how to prevent cookies to be installed on the user's browser. 
 
-The directive allows for this kind of "only warning and instructions" versions **(this component DOES NOT blocks incoming cookies)**, which are widely used by various high-traffic, well-recognized websites.
+The EU directive allows for this kind of "only warning and instructions" versions **(this component DOES NOT blocks incoming cookies)**, which are widely used by various high-traffic, well-recognized websites, such as [Adobe](http://www.adobe.com/fr/), [Le Monde](http://www.lemonde.fr) or [SoundCloud](http://www.soundcloud.com).
 
 **Demo is available at [github.io](http://sebastien-bartoli.github.io/eu-cookie/)**
+
+You can see on the demo, that the bar appears at each reload. That is because the cookie is getting deleted each time so you can see how it works, on production website, once accepted ( clicked on the link or on the X symbol ), it won't appear for a year or until the user deletes cookies.
 
 ## Usage
 
 Upload the folder anywhere on the internet, but preferably on one of your webserver. Replace the options in `index.html` (see below) with your context. 
 
-Only options 4 through 7 will need to be changed : 
+Parameters 4 through 7 will need to be changed to accomodate your configuration : 
 
 - **4** : replace `//cdn.example.org` with the domain where the folder is uploaded. The `//` before the URL insure the content will be loaded asynchronously AND using http or https depending on what's available.
-- **5** : except if you have changed the structure of the folder, you shouldn't have to change this.
+- **5** : except if you have changed the structure of the folders, you shouldn't have to change this.
 - **6** : change `subdomain.example.org` with the domain or subdomain on which you want the cookie to be applied (it should probably be the domain on which you are loading the bar).
 - **7** : you can add another, optional 7th option, that many will probably use, in order to completely customize the displayed text. It can handle any HTML code, so have fun.
 
@@ -30,7 +34,7 @@ Only options 4 through 7 will need to be changed :
 <!-- End of EU Cookie Directive Bar -->
 ```
 
-Then, copy-paste the modified content of `index.html` anywhere on your website, and voila! You're done.
+Then, copy-paste the modified content of `index.html` anywhere on your website, and *voila!* You're done.
 
 ## Dependencies
 
@@ -38,7 +42,15 @@ Then, copy-paste the modified content of `index.html` anywhere on your website, 
 - [jquery.cookie.js](https://github.com/carhartl/jquery-cookie)
 - [Foundation Icons Fonts 3](http://zurb.com/playground/foundation-icon-fonts-3)
 
-All are included into the repo and loaded automagically by the module without need for intervention. jQuery is loaded only if the hosting website isn't available.
+All are included into the repo and loaded automagically by the module without need for intervention. jQuery is loaded only if it isn't available on the hosting website.
+
+## Roadmap
+
+Next steps for this :
+
+- use & configure bower to install dependencies and remove them from the repo
+- add an 8th parameter to change the colors of the cookie-bar easily without having to go in the css file
+- find a way to block cookies being set on the browser until this is validated *(is there a need for that ?)*
 
 ## License
 
