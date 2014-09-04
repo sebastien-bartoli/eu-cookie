@@ -1,6 +1,8 @@
 # EU cookie directive bar
 
-**v0.1**
+### v0.1
+
+**There are still issues with IE that are being worked on.**
 
 This very simple, lightweight & responsive javascript UI component aims to add a small top bar on your website to display a custom message to your visitors, in compliance with the [European Union Directive about cookies and privacy](http://ec.europa.eu/ipg/basics/legal/cookies/index_en.htm).
 
@@ -48,6 +50,7 @@ All are included into the repo and loaded automagically by the module without ne
 
 Next steps for this :
 
+- resolve issues with Internet Explorer
 - use & configure bower to install dependencies and remove them from the repo
 - add an 8th parameter to change the colors of the cookie-bar easily without having to go in the css file
 - find a way to block cookies being set on the browser until this is validated *(is there a need for that ?)*
