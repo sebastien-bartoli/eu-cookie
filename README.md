@@ -1,10 +1,10 @@
 # EU Cookie Directive Bar
 
-This very simple and lightweight javascript module aims to add a small top bar on your website to display a custom message to your visitors, in compliance with the [European Union Directive about cookies and privacy](http://ec.europa.eu/ipg/basics/legal/cookies/index_en.htm).
+This very simple, lightweight & responsive javascript UI component aims to add a small top bar on your website to display a custom message to your visitors, in compliance with the [European Union Directive about cookies and privacy](http://ec.europa.eu/ipg/basics/legal/cookies/index_en.htm).
 
 This module provides only a warning to visitors. Ideally it should contain a link to your Terms or Privacy page with instructions on what are cookies, and how to prevent cookies to be installed on your website. 
 
-The directive allows for this kind of "only warning and instructions" versions (in any case this module blocks incoming cookies), which are widely used by various high-traffic, well-recognized websites.
+The directive allows for this kind of "only warning and instructions" versions **(this component DOES NOT blocks incoming cookies)**, which are widely used by various high-traffic, well-recognized websites.
 
 **Demo is available at [github.io](http://sebastien-bartoli.github.io/eu-cookie/)**
 
