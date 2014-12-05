@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import url(//fonts.googleapis.com/css?family=Montserrat:400,700);
 
 .cookie-bar{
@@ -8,34 +9,61 @@
 	color: white ;
 	background: rgb(0, 168, 157);
 	background: rgba(0, 168, 157, .95);
+=======
+.cookie-bar{
+	min-height: 35px;
+	overflow: hidden ;
+	font-size: 12px ;
+	padding: 8px 30px ;
+	color: white ;
+	background: rgb(255,99,91);
+	background: rgba(255, 99, 91, .95);
+>>>>>>> 72ada220da44935bebc94431842bb78421fbf2b3
 	border-bottom: solid 1px white;
 	box-shadow: 0 1px 10px rgba(0,0,0,.25);
 	top: 0 ;
 	z-index: 15000 ;
 	margin-top: 0 ; 
+<<<<<<< HEAD
 	font-family: "Montserrat", sans-serif ;
+=======
+	font-family: sans-serif ;
+>>>>>>> 72ada220da44935bebc94431842bb78421fbf2b3
 	transition: all 255ms ;
 	box-sizing: border-box ;
 }
 
+<<<<<<< HEAD
 .cfixed{
+=======
+.cookie-bar.cfixed{
+>>>>>>> 72ada220da44935bebc94431842bb78421fbf2b3
 	position: fixed ;
 	width: 100% ;
 }
 
+<<<<<<< HEAD
 .disappear{
+=======
+.cookie-bar.disappear{
+>>>>>>> 72ada220da44935bebc94431842bb78421fbf2b3
 	position: fixed ;
 	margin-top: -100px;
 	opacity: 0 ;
 }
 
 .cookie-bar a{
+<<<<<<< HEAD
+=======
+	color: white ;
+>>>>>>> 72ada220da44935bebc94431842bb78421fbf2b3
 	font-weight: bold ;
 	border-bottom: 1px solid white ;
 	text-decoration: none ;
 	transition: all 255ms ;
 }
 
+<<<<<<< HEAD
 .cookie-bar a, .cookie-bar i{
 	color: white ;
 }
@@ -47,6 +75,12 @@
 
 .cookie-bar a:hover, .cookie-bar i:hover{
 	color: #B1C800;
+=======
+.cookie-bar a:hover{
+	color: #1E90FF ;
+	font-weight: bold ;
+	border-bottom: 1px dotted #1E90FF ;
+>>>>>>> 72ada220da44935bebc94431842bb78421fbf2b3
 }
 
 .cookie-bar div.cookie-bar-content{
@@ -62,6 +96,13 @@
 	font-size: 16px ;
 }
 
+<<<<<<< HEAD
+=======
+.cookie-bar i:hover{
+	color: black ;
+}
+
+>>>>>>> 72ada220da44935bebc94431842bb78421fbf2b3
 @media (max-width: 768px){
 	.cookie-bar .cookie-bar-content a:before { 
 		content: 'hiddentext'; 
@@ -78,4 +119,8 @@
 		font-size: 14px ;
 		line-height: 18px ;
 	}
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 72ada220da44935bebc94431842bb78421fbf2b3
